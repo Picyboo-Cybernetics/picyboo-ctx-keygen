@@ -1,7 +1,7 @@
 {
   "name": "picyboo-ctx-keygen",
   "version": "0.1.0",
-  "description": "PICYBOO\u00ae CTX 256-bit key derivation (HKDF-SHA256).",
+  "description": "PICYBOO\u2122 CTX 256-bit key derivation (HKDF-SHA256).",
   "bin": {
     "pbctx": "bin/cli.js"
   },
