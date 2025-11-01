@@ -1,9 +1,8 @@
-.DS_Store
 node_modules/
 dist/
 coverage/
-*.log
-*.env
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.DS_Store
+.npm-debug.log*
+.vscode/
+.env
+.tmp
