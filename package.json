@@ -1,23 +1,60 @@
 {
   "name": "picyboo-ctx-keygen",
   "version": "0.1.0",
-  "description": "PICYBOO™ CTX 256-bit key derivation (HKDF-SHA256).",
+  "description": "PICYBOO™ CTX HKDF toolkit for deterministic, tenant-scoped key derivation.",
+  "type": "module",
   "bin": {
     "pbctx": "bin/cli.js"
   },
-  "type": "module",
-  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./types/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "dist",
+    "types",
+    "bin",
+    "docs",
+    "examples",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [
     "picyboo",
     "hkdf",
     "sha256",
-    "keygen"
+    "keygen",
+    "ctx",
+    "webcrypto"
   ],
   "scripts": {
-    "test": "node test/hkdf.spec.js",
-    "start": "node bin/cli.js"
+    "build": "tsup",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "bench": "node scripts/bench.mjs demo@example.com 200"
   },
   "dependencies": {
     "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.7.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0"
   }
 }
