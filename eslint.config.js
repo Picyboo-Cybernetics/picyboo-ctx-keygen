@@ -8,6 +8,13 @@ export default [
     languageOptions: {
       sourceType: 'module',
       ecmaVersion: 'latest',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        TextDecoder: 'readonly',
+        TextEncoder: 'readonly',
+      },
     },
     rules: {
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
