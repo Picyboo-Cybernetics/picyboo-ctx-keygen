@@ -1,8 +1,73 @@
-node_modules/
-dist/
-coverage/
+# General
 .DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.zip
+*.crx
+*.pem
+node_modules/
+coverage/
 .npm-debug.log*
 .vscode/
+
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
 .env
-.tmp
+.env.*
+.env/
+build/
+dist/
+*.egg-info/
+
+# PHP
+vendor/
+
+# Docs
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# OS
+Icon?
+
+# Credentials and local configs
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.db
+*.sqlite
+*.sqlite3
+secrets.*
+config.local.*
+settings.json
+credentials.json
+
+# Node / Frontend (falls vorhanden)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+out/
+coverage/
+.vscode/
+.idea/
+
+# Backup / Cache
+*.bak
+*.old
+*.orig
+.cache/
+tmp/
+logs/
